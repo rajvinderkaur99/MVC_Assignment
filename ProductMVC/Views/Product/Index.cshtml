@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ProductMVC.Models.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Products</h2>
+@if (!Model.Any())
+{
+    <text>We don't have any Products yet</text>
+}
+<table class="table table-bordered table-hover">
+    <tr>
+
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Rate</th>
+
+    </tr>
+    @foreach (var prod in Model)
+    {
+<tr>
+    <td>@prod.Pid</td>
+    <td>@Html.ActionLink(prod.PName, "Details", "Product", new { id = prod.Pid },null)</td>
+    <td>@prod.Rate</td>
+
+</tr>
+    }
+</table>
+

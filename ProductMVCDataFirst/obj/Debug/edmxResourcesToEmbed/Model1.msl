@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AssignmentMVCModelStoreContainer" CdmEntityContainer="AssignmentMVCEntities">
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="AssignmentMVCModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="PId" ColumnName="PId" />
+          <ScalarProperty Name="PName" ColumnName="PName" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
